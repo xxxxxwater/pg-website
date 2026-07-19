@@ -214,6 +214,7 @@ header.site-header {
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   margin: 0;
+  will-change: transform;
 }
 
 .section-title p {
@@ -384,6 +385,205 @@ footer {
   padding: 0;
 }
 
+/* ══════════════════════════════════════════════════════════════
+   DYNAMIC INTERACTIONS — card tilt, button shimmer, SVG
+   ══════════════════════════════════════════════════════════════ */
+
+/* Hero bg canvas stacking */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Card hover — tilt handled by JS, CSS provides color transitions */
+.card,
+.research-card {
+  transition: border-color 0.25s ease;
+}
+.card:hover,
+.research-card:hover {
+  border-color: rgba(11, 111, 106, 0.28);
+}
+.timeline-item {
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.timeline-item:hover {
+  border-color: rgba(11, 111, 106, 0.32);
+}
+
+/* Button shimmer sweep on hover */
+.button {
+  position: relative;
+  overflow: hidden;
+}
+.button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.22) 50%,
+    transparent 65%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.55s ease;
+  pointer-events: none;
+}
+.button:hover::after {
+  transform: translateX(120%);
+}
+
+/* SVG path draw-on and circle pulse */
+@keyframes dashDraw {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes svgPulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.55; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   STREAMING TEXT — OpenAI-style token-by-token reveal
+   Gradient headings stream in word by word, then shimmer
+   ══════════════════════════════════════════════════════════════ */
+
+@keyframes tokenReveal {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes shimmerSweep {
+  0%   { background-position:  220% center; }
+  100% { background-position: -220% center; }
+}
+
+@keyframes cursorBlink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* Gradient + shimmer applied to headings via JS */
+.stream-heading {
+  color: #0a0a0a; /* solid fallback — shown while streaming and if gradient unsupported */
+  background: linear-gradient(
+    115deg,
+    #0a0a0a 0%,
+    #0b6f6a 40%,
+    #c7852d 64%,
+    #0a0a0a 100%
+  );
+  background-size: 260% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stream-heading.shimmer-active {
+  animation: shimmerSweep 5.5s ease-in-out infinite;
+}
+
+/* Individual word spans injected by JS — opacity driven by JS setTimeout */
+.stream-wrap .token {
+  display: inline;
+}
+
+/* Blinking cursor shown while hero H1 streams */
+.stream-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 0.82em;
+  background: #0b6f6a;
+  margin-left: 3px;
+  vertical-align: text-bottom;
+  border-radius: 1px;
+  animation: cursorBlink 0.72s step-end infinite;
+}
+
+/* ── Contact Form ── */
+.contact-form {
+  margin-top: 32px;
+  display: grid;
+  gap: 18px;
+}
+
+.contact-form .form-row {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact-form label {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 7px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: #fff;
+  font-family: var(--font-text);
+  font-size: 15px;
+  color: var(--ink);
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  -webkit-appearance: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0b6f6a;
+  box-shadow: 0 0 0 3px rgba(11, 111, 106, 0.08);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 130px;
+  line-height: 1.65;
+}
+
+.form-status {
+  padding: 13px 18px;
+  font-size: 14px;
+  display: none;
+  border-radius: 2px;
+}
+.form-status.success {
+  display: block;
+  background: #eef7f6;
+  border: 1px solid rgba(11, 111, 106, 0.28);
+  color: #0b6f6a;
+}
+.form-status.error {
+  display: block;
+  background: #fff5f2;
+  border: 1px solid rgba(180, 60, 30, 0.25);
+  color: #b43c1e;
+}
+
+.contact-note {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--ink-muted);
+}
+
 @media (max-width: 720px) {
   .nav-links {
     flex-wrap: wrap;
@@ -392,6 +592,10 @@ footer {
   }
 
   .timeline-item {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form .form-row {
     grid-template-columns: 1fr;
   }
 }

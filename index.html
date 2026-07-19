@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260118" />
+  <link rel="stylesheet" href="styles.css?v=202604041901" />
 </head>
 <body>
   <header class="site-header">
@@ -19,16 +19,15 @@
     </div>
     <div class="container nav">
       <div class="brand">
-        <img class="brand-logo" src="https://pgresearch.org/wp-content/uploads/2024/10/%E6%88%AA%E5%B1%8F2024-10-17-23.23.48.png" alt="PureGamma Research logo" />
+        <img class="brand-logo" src="assets/partners/pglogo.png" alt="PureGamma Research logo" />
         <span>PureGamma Research</span>
       </div>
       <nav class="nav-links">
         <a href="#about">About</a>
         <a href="#strategy">Strategy</a>
         <a href="#research">Research</a>
-        <a href="#support">Tech Support</a>
         <a href="#process">Methodology</a>
-        <a href="research.html">PG Research</a>
+        <a href="https://puregamma.ai">PureGamma AI</a>
       </nav>
     </div>
   </header>
@@ -38,10 +37,10 @@
       <div class="container hero-grid">
         <div class="reveal">
           <div class="kicker">All-Weather Crypto Research</div>
-          <h1>Trading as a scientific process,\n            powered by multi-scale signals and disciplined risk control.</h1>
+          <h1>Trading as a scientific process, powered by multi-scale signals and disciplined risk control.</h1>
           <p>Since 2017, PG Research has focused on digital assets, combining structured market data, sentiment signals, and macro regimes to build cross-market, cross-horizon hedged portfolios.</p>
           <div class="cta-row">
-            <a class="button primary" href="https://docsend.com/v/94csc/cn">Read the investment framework</a>
+            <a class="button primary" href="https://puregamma.ai">PureGamma AI</a>
             <a class="button secondary" href="#contact">Partner with us</a>
           </div>
         </div>
@@ -187,31 +186,6 @@
       </div>
     </section>
 
-    <section id="support" class="section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Technology Support</h2>
-          <p>We provide engineering support for partner platforms and copy-trading infrastructure.</p>
-        </div>
-        <div class="grid-3">
-          <div class="card reveal">
-            <h3>MeiMonkey.capital</h3>
-            <p>Technical support for strategy infrastructure and system reliability.</p>
-            <p><a href="https://meimonkey.capital">https://meimonkey.capital</a></p>
-          </div>
-          <div class="card reveal">
-            <h3>Little Penguin Copy Trading</h3>
-            <p>Technical support for copy-trading operations and performance reporting.</p>
-            <p><a href="https://www.binance.com/en/copy-trading/lead-details/4682294088813848065?timeRange=180D">https://www.binance.com/en/copy-trading/lead-details/4682294088813848065?timeRange=180D</a></p>
-          </div>
-          <div class="card reveal">
-            <h3>Institutional Access</h3>
-            <p>SMA and API integrations for customized mandates and execution pipelines.</p>
-            <p><a href="#contact">Contact the team</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section id="partners" class="section">
       <div class="container">
@@ -258,20 +232,47 @@
       <div class="container">
         <div class="section-title">
           <h2>Contact</h2>
-          <p>For strategy research, data engineering, or partnerships, reach us here.</p>
+          <p>For partnerships, research collaboration, or institutional access — send us a message and we will respond shortly.</p>
         </div>
-        <div class="grid-3">
-          <div class="card reveal">
-            <h3>BP Partnerships</h3>
-            <p><a href="mailto:haoran@pgresearch.org">haoran@pgresearch.org</a></p>
-          </div>
-          <div class="card reveal">
-            <h3>LP Partnerships</h3>
-            <p><a href="mailto:chris@pgresearch.org">chris@pgresearch.org</a></p>
-          </div>
-          <div class="card reveal">
-            <h3>Team Updates</h3>
-            <p><a href="https://twitter.com/Chris_PureGamma">Twitter @Chris_PureGamma</a></p>
+        <div class="card reveal">
+          <form id="contact-form" class="contact-form" action="contact.php" method="post" novalidate>
+            <!-- Honeypot: bots fill this, humans don't see it -->
+            <div style="display:none" aria-hidden="true">
+              <input type="text" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+            <div class="form-row">
+              <div>
+                <label for="cf-name">Name *</label>
+                <input id="cf-name" name="name" type="text" required placeholder="Your name" />
+              </div>
+              <div>
+                <label for="cf-email">Email *</label>
+                <input id="cf-email" name="email" type="email" required placeholder="you@example.com" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div>
+                <label for="cf-company">Company / Organization</label>
+                <input id="cf-company" name="company" type="text" placeholder="Optional" />
+              </div>
+              <div>
+                <label for="cf-role">Role / Title</label>
+                <input id="cf-role" name="role" type="text" placeholder="Optional" />
+              </div>
+            </div>
+            <div>
+              <label for="cf-message">Message *</label>
+              <textarea id="cf-message" name="message" required placeholder="Tell us about your interest — partnerships, research, or institutional access…"></textarea>
+            </div>
+            <div>
+              <button type="submit" class="button primary">Send Message</button>
+            </div>
+            <div id="form-status" class="form-status" role="alert"></div>
+          </form>
+          <div class="contact-note">
+            <span>BP Partnerships: <a href="mailto:haoran@pgresearch.org">haoran@pgresearch.org</a></span>
+            <span>LP Partnerships: <a href="mailto:chris@pgresearch.org">chris@pgresearch.org</a></span>
+            <span>Twitter: <a href="https://twitter.com/Chris_PureGamma">@Chris_PureGamma</a></span>
           </div>
         </div>
       </div>
@@ -292,7 +293,7 @@
         <p>All-Weather Strategy for Digital Assets</p>
       </div>
       <div>
-        <p><a href="research.html">PG Research Page</a></p>
+        <p><a href="https://puregamma.ai">PureGamma AI</a></p>
         <p><a href="https://pgresearch.org/">Current website</a></p>
       </div>
       <div>
@@ -301,6 +302,7 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="pretext-bundle.js?v=202604041901"></script>
+  <script src="main.js?v=202604041901" defer></script>
 </body>
 </html>

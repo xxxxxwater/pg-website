@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PG Research | PureGamma Research</title>
+  <title>Investment Framework | PureGamma Research</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -24,11 +24,10 @@
       </div>
       <nav class="nav-links">
         <a href="index.html">Home</a>
-        <a href="#focus">Focus</a>
-        <a href="#nautilus">Nautilus</a>
+        <a href="#overview">Overview</a>
         <a href="#abstract">Abstract</a>
-        <a href="#docsend">DocSend</a>
-        <a href="#contact">Contact</a>
+        <a href="#docsend">Full Materials</a>
+        <a href="https://puregamma.ai">PureGamma AI</a>
       </nav>
     </div>
   </header>
@@ -37,76 +36,82 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="reveal">
-          <div class="kicker"><a href="https://puregamma.ai">PureGamma AI</a></div>
-          <h1>All-Weather Strategy Research Team</h1>
-          <p>We study market microstructure, structured data, and risk regimes to build durable, low-correlation strategy portfolios.</p>
+          <div class="kicker">Investment Framework</div>
+          <h1>Multi-Scale Signal Architecture for Digital Asset Portfolios</h1>
+          <p>A systematic overview of our signal generation, fusion methodology, and risk-controlled execution framework.</p>
           <div class="cta-row">
-            <a class="button primary" href="#docsend">View full materials</a>
+            <a class="button primary" href="https://docsend.com/v/94csc/cn">Open full DocSend deck</a>
             <a class="button secondary" href="index.html">Back to home</a>
           </div>
         </div>
         <div class="hero-card reveal">
           <div class="hero-illustration">
-            <svg viewBox="0 0 320 220" role="img" aria-label="Strategy flow">
+            <svg viewBox="0 0 320 220" role="img" aria-label="Signal architecture">
+              <defs>
+                <linearGradient id="grad2" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#0b6f6a" />
+                  <stop offset="100%" stop-color="#c7852d" />
+                </linearGradient>
+              </defs>
               <rect width="320" height="220" fill="none" />
-              <path d="M40 60 H280" stroke="#0b6f6a" stroke-width="3" />
-              <circle cx="70" cy="60" r="16" fill="#f4e2c2" stroke="#0b6f6a" />
-              <circle cx="160" cy="60" r="16" fill="#dfe8e6" stroke="#0b6f6a" />
-              <circle cx="250" cy="60" r="16" fill="#f4e2c2" stroke="#0b6f6a" />
-              <path d="M40 140 Q160 110 280 160" stroke="#c7852d" stroke-width="3" fill="none" />
-              <path d="M40 170 Q160 140 280 190" stroke="#173c3a" stroke-width="2" fill="none" stroke-dasharray="6 6" />
+              <!-- CWT layer -->
+              <path d="M30 80 Q90 40 160 70 Q230 100 290 60" fill="none" stroke="url(#grad2)" stroke-width="2.5" />
+              <!-- LSTM layer -->
+              <path d="M30 120 Q100 90 160 110 Q220 130 290 100" fill="none" stroke="#c7852d" stroke-width="2" stroke-dasharray="5 4" />
+              <!-- ARIMA layer -->
+              <path d="M30 155 Q110 140 160 148 Q210 156 290 138" fill="none" stroke="#173c3a" stroke-width="1.5" stroke-dasharray="3 5" />
+              <!-- Fusion node -->
+              <circle cx="160" cy="110" r="18" fill="#f4e2c2" stroke="#0b6f6a" stroke-width="2" />
+              <circle cx="70"  cy="95"  r="8"  fill="#0b6f6a" opacity="0.35" />
+              <circle cx="250" cy="95"  r="8"  fill="#c7852d"  opacity="0.35" />
             </svg>
           </div>
           <div class="metrics">
             <div class="metric">
-              <strong>5+ Markets</strong>
-              <span>Exchanges & derivatives</span>
+              <strong>Sharpe 3.72</strong>
+              <span>2023 BTC/USDT backtest</span>
             </div>
             <div class="metric">
-              <strong>Multi-Strategy</strong>
-              <span>Trend, arb, volatility</span>
+              <strong>1.9% MDD</strong>
+              <span>Maximum drawdown</span>
             </div>
             <div class="metric">
-              <strong>Engineering</strong>
-              <span>Real-time risk control</span>
+              <strong>58.7%</strong>
+              <span>Win rate</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="focus" class="section">
+    <section id="overview" class="section">
       <div class="container">
         <div class="section-title">
-          <h2>Research Focus</h2>
-          <p>We iterate strategies using structured data, order flow analytics, and sentiment signals.</p>
+          <h2>Strategy Overview</h2>
+          <p>From data ingestion to execution, a closed-loop research and deployment system.</p>
         </div>
-        <div class="grid-3">
-          <div class="card reveal">
-            <h3>Order Flow Research</h3>
-            <p>Depth, trade intensity, and liquidity shock analysis form interpretable market-structure signals.</p>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <span>Signal Generation</span>
+            <div>
+              <strong>Multi-Scale CWT + LSTM/ARIMA</strong>
+              <p>Continuous Wavelet Transform isolates noise across time horizons; LSTM captures nonlinear dynamics; ARIMA handles mean reversion and seasonality.</p>
+            </div>
           </div>
-          <div class="card reveal">
-            <h3>Sentiment & Narrative</h3>
-            <p>Macro events and community sentiment reveal short-term momentum and risk appetite shifts.</p>
+          <div class="timeline-item reveal">
+            <span>Signal Fusion</span>
+            <div>
+              <strong>Dynamic Weights + RSI Thresholds</strong>
+              <p>A 14-period RSI filters overbought/oversold triggers; dynamic weighting blends LSTM and ARIMA outputs to reduce false-trade frequency.</p>
+            </div>
           </div>
-          <div class="card reveal">
-            <h3>Strategy Engineering</h3>
-            <p>Data pipelines, monitoring, and execution engines improve deployment efficiency and stability.</p>
+          <div class="timeline-item reveal">
+            <span>Risk Control</span>
+            <div>
+              <strong>Cointegration Filtering & Layered Hedges</strong>
+              <p>BTC–BNB spread portfolio uses the Johansen test to establish long-term equilibrium and discard signals deviating from the cointegration space.</p>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="nautilus" class="section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Nautilus</h2>
-          <p>From ancient Greek “sailor” and naus “ship.” The nautilus shell is a modular spiral that inspires our design and architecture aesthetics.</p>
-        </div>
-        <div class="card reveal">
-          <h3>Nautilus – from ancient Greek “sailor” and naus “ship.”</h3>
-          <p>The nautilus shell consists of modular chambers with a growth factor that approximates a logarithmic spiral. This geometry informs the aesthetics and architecture of our research systems.</p>
         </div>
       </div>
     </section>
@@ -118,7 +123,7 @@
           <p>Multi-scale signal generation for high-noise crypto order flow.</p>
         </div>
         <div class="card reveal">
-          <p>To address the non-stationarity and high-noise characteristics of order flow in highly liquid cryptocurrency assets (BTC/USDT), this study proposes a multi-scale signal generation framework integrating Continuous Wavelet Transform (CWT), an LSTM–ARIMA hybrid model, and Relative Strength Index (RSI). By decomposing 2–7 days of historical order-flow data (price, volume, order-book depth) using CWT, mid-to-short-term components (1h–6h) are extracted to suppress high-frequency noise, while low-frequency components (&gt;6h) are input into an ARIMA model to analyze mean reversion and seasonal fluctuations. High-frequency components (&lt;1h) are processed by an LSTM network to capture nonlinear dynamics such as market sentiment shifts and liquidity pulses. The RSI indicator optimizes signal trigger thresholds, and cointegration error filtering (BTC–BNB spread portfolio) eliminates anomalous signals. Empirical analysis on 2023 BTC/USDT high-frequency data from Binance shows a Sharpe ratio of 3.72 (26.4% improvement over the standalone LSTM model), maximum drawdown of 1.9%, and a win rate of 58.7%, validating the model’s effectiveness in noise reduction, dynamic response, and risk control.</p>
+          <p>To address the non-stationarity and high-noise characteristics of order flow in highly liquid cryptocurrency assets (BTC/USDT), this study proposes a multi-scale signal generation framework integrating Continuous Wavelet Transform (CWT), an LSTM–ARIMA hybrid model, and Relative Strength Index (RSI). By decomposing 2–7 days of historical order-flow data (price, volume, order-book depth) using CWT, mid-to-short-term components (1h–6h) are extracted to suppress high-frequency noise, while low-frequency components (&gt;6h) are input into an ARIMA model to analyze mean reversion and seasonal fluctuations. High-frequency components (&lt;1h) are processed by an LSTM network to capture nonlinear dynamics such as market sentiment shifts and liquidity pulses. The RSI indicator optimizes signal trigger thresholds, and cointegration error filtering (BTC–BNB spread portfolio) eliminates anomalous signals. Empirical analysis on 2023 BTC/USDT high-frequency data from Binance shows a Sharpe ratio of 3.72 (26.4% improvement over the standalone LSTM model), maximum drawdown of 1.9%, and a win rate of 58.7%, validating the model's effectiveness in noise reduction, dynamic response, and risk control.</p>
           <p><strong>Model Architecture and Empirical Analysis</strong> Multi-scale decomposition uses the Morlet wavelet basis to isolate high-frequency noise (&lt;1h), mid-term trends (1h–6h), and long-term cycles (&gt;6h). Low-frequency components are modeled by ARIMA for linear statistical patterns, while high-frequency components are fed into an LSTM network to capture nonlinear dynamics such as liquidity pulses and whale-address anomalies.</p>
           <p><strong>Signal Fusion and Optimization</strong> A dynamic weighting mechanism integrates LSTM (nonlinear responses) and ARIMA (steady-state trends), augmented by a 14-period RSI to filter overbought/oversold signals and reduce false trading frequency. Cointegration filtering constructs a BTC–BNB spread portfolio, leveraging the Johansen test to establish long-term equilibrium relationships and dynamically discard signals deviating from the cointegration space.</p>
           <div class="cta-row">
@@ -132,18 +137,18 @@
     <section id="docsend" class="section">
       <div class="container">
         <div class="section-title">
-          <h2>Performance Snapshot</h2>
-          <p>Latest net value metrics from the copy-trading strategy.</p>
+          <h2>Full Materials</h2>
+          <p>Team background, strategy deck, and portfolio construction approach — via DocSend.</p>
         </div>
         <div class="card reveal">
-          <img src="assets/performance/jingzhi.png?v=2" alt="90D performance snapshot" />
-          <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap;">
-            <a class="button secondary" href="https://docsend.com/v/94csc/cn">Full materials (DocSend)</a>
+          <p>The complete investment framework document covers team background, strategy architecture, risk management protocols, and portfolio construction methodology. Access requires a DocSend link.</p>
+          <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;">
+            <a class="button primary" href="https://docsend.com/v/94csc/cn">Open DocSend deck</a>
+            <a class="button secondary" href="https://puregamma.ai">PureGamma AI</a>
           </div>
         </div>
       </div>
     </section>
-
 
     <section id="contact" class="section">
       <div class="container">
@@ -202,6 +207,7 @@
       </div>
       <div>
         <p><a href="index.html">Home</a></p>
+        <p><a href="https://puregamma.ai">PureGamma AI</a></p>
         <p><a href="https://pgresearch.org/">Current website</a></p>
       </div>
       <div>

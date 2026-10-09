@@ -1,222 +1,85 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Investment Framework | PureGamma Research</title>
+  <title>Investment framework | PureGamma Research</title>
+  <meta name="description" content="A shared framework for research, allocation, execution, and review." />
+  <link rel="canonical" href="https://pgresearch.org/framework.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PureGamma Research" />
+  <meta property="og:title" content="Investment framework | PureGamma Research" />
+  <meta property="og:description" content="Verifiable digital asset research, disciplined risk control, and institutional-grade strategy access." />
+  <meta property="og:url" content="https://pgresearch.org/framework.html" />
+  <meta property="og:image" content="https://pgresearch.org/icon-512.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Investment framework | PureGamma Research" />
+  <meta name="twitter:description" content="Institutional digital asset research and risk-governed strategy frameworks." />
+  <meta name="twitter:image" content="https://pgresearch.org/icon-512.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#0a0a0a" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=202604041901" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="pg-release-20261009.css?v=20261009r1" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "PureGamma Research",
+      "url": "https://pgresearch.org/",
+      "logo": "https://pgresearch.org/icon-512.png"
+    }
+  </script>
 </head>
-<body>
-  <header class="site-header">
-    <div class="top-bar">
-      <div class="container">
-        <strong>SMA (Separately Managed Accounts) & API Partnerships</strong>
-        <span>Institutional access, risk-controlled execution</span>
-      </div>
-    </div>
-    <div class="container nav">
-      <div class="brand">
-        <img class="brand-logo" src="assets/partners/pglogo.png" alt="PureGamma Research logo" />
-        <span>PureGamma Research</span>
-      </div>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="#overview">Overview</a>
-        <a href="#abstract">Abstract</a>
-        <a href="#docsend">Full Materials</a>
-        <a href="https://puregamma.ai">PureGamma AI</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="reveal">
-          <div class="kicker">Investment Framework</div>
-          <h1>Multi-Scale Signal Architecture for Digital Asset Portfolios</h1>
-          <p>A systematic overview of our signal generation, fusion methodology, and risk-controlled execution framework.</p>
-          <div class="cta-row">
-            <a class="button primary" href="https://docsend.com/v/94csc/cn">Open full DocSend deck</a>
-            <a class="button secondary" href="index.html">Back to home</a>
-          </div>
-        </div>
-        <div class="hero-card reveal">
-          <div class="hero-illustration">
-            <svg viewBox="0 0 320 220" role="img" aria-label="Signal architecture">
-              <defs>
-                <linearGradient id="grad2" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#0b6f6a" />
-                  <stop offset="100%" stop-color="#c7852d" />
-                </linearGradient>
-              </defs>
-              <rect width="320" height="220" fill="none" />
-              <!-- CWT layer -->
-              <path d="M30 80 Q90 40 160 70 Q230 100 290 60" fill="none" stroke="url(#grad2)" stroke-width="2.5" />
-              <!-- LSTM layer -->
-              <path d="M30 120 Q100 90 160 110 Q220 130 290 100" fill="none" stroke="#c7852d" stroke-width="2" stroke-dasharray="5 4" />
-              <!-- ARIMA layer -->
-              <path d="M30 155 Q110 140 160 148 Q210 156 290 138" fill="none" stroke="#173c3a" stroke-width="1.5" stroke-dasharray="3 5" />
-              <!-- Fusion node -->
-              <circle cx="160" cy="110" r="18" fill="#f4e2c2" stroke="#0b6f6a" stroke-width="2" />
-              <circle cx="70"  cy="95"  r="8"  fill="#0b6f6a" opacity="0.35" />
-              <circle cx="250" cy="95"  r="8"  fill="#c7852d"  opacity="0.35" />
-            </svg>
-          </div>
-          <div class="metrics">
-            <div class="metric">
-              <strong>Sharpe 3.72</strong>
-              <span>2023 BTC/USDT backtest</span>
-            </div>
-            <div class="metric">
-              <strong>1.9% MDD</strong>
-              <span>Maximum drawdown</span>
-            </div>
-            <div class="metric">
-              <strong>58.7%</strong>
-              <span>Win rate</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="overview" class="section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Strategy Overview</h2>
-          <p>From data ingestion to execution, a closed-loop research and deployment system.</p>
-        </div>
-        <div class="timeline">
-          <div class="timeline-item reveal">
-            <span>Signal Generation</span>
-            <div>
-              <strong>Multi-Scale CWT + LSTM/ARIMA</strong>
-              <p>Continuous Wavelet Transform isolates noise across time horizons; LSTM captures nonlinear dynamics; ARIMA handles mean reversion and seasonality.</p>
-            </div>
-          </div>
-          <div class="timeline-item reveal">
-            <span>Signal Fusion</span>
-            <div>
-              <strong>Dynamic Weights + RSI Thresholds</strong>
-              <p>A 14-period RSI filters overbought/oversold triggers; dynamic weighting blends LSTM and ARIMA outputs to reduce false-trade frequency.</p>
-            </div>
-          </div>
-          <div class="timeline-item reveal">
-            <span>Risk Control</span>
-            <div>
-              <strong>Cointegration Filtering & Layered Hedges</strong>
-              <p>BTC–BNB spread portfolio uses the Johansen test to establish long-term equilibrium and discard signals deviating from the cointegration space.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="abstract" class="section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Abstract</h2>
-          <p>Multi-scale signal generation for high-noise crypto order flow.</p>
-        </div>
-        <div class="card reveal">
-          <p>To address the non-stationarity and high-noise characteristics of order flow in highly liquid cryptocurrency assets (BTC/USDT), this study proposes a multi-scale signal generation framework integrating Continuous Wavelet Transform (CWT), an LSTM–ARIMA hybrid model, and Relative Strength Index (RSI). By decomposing 2–7 days of historical order-flow data (price, volume, order-book depth) using CWT, mid-to-short-term components (1h–6h) are extracted to suppress high-frequency noise, while low-frequency components (&gt;6h) are input into an ARIMA model to analyze mean reversion and seasonal fluctuations. High-frequency components (&lt;1h) are processed by an LSTM network to capture nonlinear dynamics such as market sentiment shifts and liquidity pulses. The RSI indicator optimizes signal trigger thresholds, and cointegration error filtering (BTC–BNB spread portfolio) eliminates anomalous signals. Empirical analysis on 2023 BTC/USDT high-frequency data from Binance shows a Sharpe ratio of 3.72 (26.4% improvement over the standalone LSTM model), maximum drawdown of 1.9%, and a win rate of 58.7%, validating the model's effectiveness in noise reduction, dynamic response, and risk control.</p>
-          <p><strong>Model Architecture and Empirical Analysis</strong> Multi-scale decomposition uses the Morlet wavelet basis to isolate high-frequency noise (&lt;1h), mid-term trends (1h–6h), and long-term cycles (&gt;6h). Low-frequency components are modeled by ARIMA for linear statistical patterns, while high-frequency components are fed into an LSTM network to capture nonlinear dynamics such as liquidity pulses and whale-address anomalies.</p>
-          <p><strong>Signal Fusion and Optimization</strong> A dynamic weighting mechanism integrates LSTM (nonlinear responses) and ARIMA (steady-state trends), augmented by a 14-period RSI to filter overbought/oversold signals and reduce false trading frequency. Cointegration filtering constructs a BTC–BNB spread portfolio, leveraging the Johansen test to establish long-term equilibrium relationships and dynamically discard signals deviating from the cointegration space.</p>
-          <div class="cta-row">
-            <a class="button secondary" href="https://github.com/xxxxxwater/bnb-btc_strastegy/blob/main/Multi_Scale_Wavelet_Decomposition_and_RSI_Cointegration_Fusion_Framework%E2%80%A6.pdf">Read the paper</a>
-            <a class="button secondary" href="https://github.com/HaoranXue/Machine_Learning_For_Structured_Data">Structured data ML repo</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="docsend" class="section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Full Materials</h2>
-          <p>Team background, strategy deck, and portfolio construction approach — via DocSend.</p>
-        </div>
-        <div class="card reveal">
-          <p>The complete investment framework document covers team background, strategy architecture, risk management protocols, and portfolio construction methodology. Access requires a DocSend link.</p>
-          <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;">
-            <a class="button primary" href="https://docsend.com/v/94csc/cn">Open DocSend deck</a>
-            <a class="button secondary" href="https://puregamma.ai">PureGamma AI</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>For partnerships, research collaboration, or talent opportunities — send us a message.</p>
-        </div>
-        <div class="card reveal">
-          <form id="contact-form" class="contact-form" action="contact.php" method="post" novalidate>
+<body class="release"><a class="skip-link" href="#main-content">Skip to content</a><header class="release-header"><div class="wrap header-inner">
+ <a class="wordmark" href="/" aria-label="PureGamma Research home"><img src="assets/partners/pglogo.png" alt="" width="34" height="34" />PureGamma Research</a>
+ <button class="menu-button" type="button" aria-expanded="false" aria-controls="release-navigation" aria-label="Open navigation">☰</button>
+ <nav class="header-links" id="release-navigation" aria-label="Primary navigation"><a href="index.html#performance">Performance</a><a href="index.html#strategy">Strategy</a><a href="index.html#insights">Research</a><a href="https://puregamma.ai">PureGamma AI ↗</a><a class="nav-contact" href="index.html#access">Discuss access ↗</a></nav>
+</div></header><main id="main-content"><section class="launch-hero secondary-hero"><div class="wrap"><p class="eyebrow">PureGamma Research / Investment framework</p><h1>From signal<br />to portfolio.</h1><p class="hero-description">A shared framework for research, allocation, execution, and review.</p><div class="hero-bottom" style="margin-top:25px"><a class="text-link" href="index.html">Explore PG Composite Strategy ↗</a></div></div></section><div class="wrap article-layout"><aside class="page-index"><p>On this page</p><a href="#overview">From research to allocation</a><a href="#abstract">Validation &amp; feedback</a><a href="#boundaries">Operating boundaries</a><a href="#docsend">Institutional materials</a><a href="#contact">Contact</a></aside><div class="article-body"><section class="article-section" id="overview"><div class="section-head"><h2>From research to allocation</h2></div><p class="lead">PG Composite Strategy connects signal research to portfolio construction and execution. The framework gives each layer a distinct role, then evaluates their interactions through portfolio and post-trade review.</p><div class="strategy-list"><article class="strategy-row"><span class="num">01</span><div><h3>Observe &amp; model</h3><small>RESEARCH INPUTS</small></div><p>Price, volume, order flow, and market context inform higher-timeframe, CTA, multi-factor, and machine-learning research.</p></article><article class="strategy-row"><span class="num">02</span><div><h3>Fuse signals</h3><small>WEIGHTS / FILTERS</small></div><p>The published model framework studies dynamic LSTM–ARIMA weighting and 14-period RSI thresholds to combine signals across horizons.</p></article><article class="strategy-row"><span class="num">03</span><div><h3>Construct the portfolio</h3><small>ALLOCATION / EXPOSURE</small></div><p>Portfolio relationships, allocation constraints, and hedge research are examined together. Published BTC–BNB research uses Johansen cointegration filtering.</p></article><article class="strategy-row"><span class="num">04</span><div><h3>Execute &amp; review</h3><small>TWAP / VWAP</small></div><p>Time- and volume-weighted approaches connect target allocation to execution. Post-trade review examines liquidity, slippage, funding, and portfolio outcomes.</p></article></div></section><section class="article-section" id="abstract"><div class="section-head"><h2>Validation &amp; feedback</h2></div><p class="lead">Observation, hypothesis, validation, and review form a continuing research process. Model outputs are assessed in the context of regime changes, parameter uncertainty, and execution conditions.</p><div class="risk-list"><article><h3>Signal validation</h3><p>Examine the signal construction, sampling basis, and historical assumptions.</p></article><article><h3>Portfolio review</h3><p>Review drawdowns, exposure, concentration, and the interaction of portfolio inputs.</p></article><article><h3>Execution evidence</h3><p>Assess the reporting basis, fees, funding, and account or venue dependencies.</p></article><article><h3>Model iteration</h3><p>Use findings to refine the next hypothesis and validation agenda.</p></article></div><p class="method-note"><a class="text-link" href="research.html#abstract">Read the multi-scale model research ↗</a></p></section><section class="article-section" id="boundaries"><div class="section-head"><h2>Operating boundaries</h2></div><p class="lead">An institutional relationship begins with a defined mandate. Custody, API permissions, responsibilities, leverage and allocation constraints, and reporting are reviewed before an account or integration is considered.</p><div class="table-wrap"><table class="access-table"><thead><tr><th scope="col">Review area</th><th scope="col">Questions to establish</th></tr></thead><tbody><tr><td>Account structure</td><td>Custody, account ownership, permissions, and access limits.</td></tr><tr><td>Mandate</td><td>Eligible markets, allocation, exposure, and execution responsibilities.</td></tr><tr><td>Reporting</td><td>NAV calculation, fee treatment, reconciliation, and review cadence.</td></tr></tbody></table></div><p class="method-note"><a class="text-link" href="legal.html#services">Review the client services framework ↗</a></p></section><section class="article-section" id="docsend"><div class="section-head"><h2>Institutional materials</h2></div><div class="resource-item"><span class="resource-type">Framework</span><div><h3>Team, strategy &amp; research materials</h3><p>Background, process, portfolio construction, and access pathways.</p></div><a class="resource-link" href="https://docsend.com/v/94csc/cn" target="_blank" rel="noopener">Open materials ↗</a></div><div class="resource-item"><span class="resource-type">Track record</span><div><h3>Reported composite performance</h3><p>Updated NAV, annual and monthly returns, and calculation methodology.</p></div><a class="resource-link" href="index.html#performance">View performance ↗</a></div></section><section class="article-section" id="access"><div class="contact-intro" id="contact"><div><h3>Let’s discuss your mandate.</h3><p>Tell us your account structure, research interests, and reporting needs.</p></div><button class="contact-toggle" type="button">Start a conversation ↗</button></div><details class="contact-details" id="contact-details"><summary>Send an institutional inquiry</summary><form id="contact-form" class="contact-form" action="contact.php" method="post" novalidate>
+            <!-- Honeypot: bots fill this, humans don't see it -->
             <div style="display:none" aria-hidden="true">
               <input type="text" name="website" tabindex="-1" autocomplete="off" />
             </div>
             <div class="form-row">
               <div>
                 <label for="cf-name">Name *</label>
-                <input id="cf-name" name="name" type="text" required placeholder="Your name" />
+                <input id="cf-name" name="name" type="text" required minlength="2" maxlength="80" autocomplete="name" placeholder="Your name" aria-describedby="cf-name-error" />
+                <p class="field-error" id="cf-name-error" data-error-for="name"></p>
               </div>
               <div>
                 <label for="cf-email">Email *</label>
-                <input id="cf-email" name="email" type="email" required placeholder="you@example.com" />
+                <input id="cf-email" name="email" type="email" required maxlength="120" autocomplete="email" inputmode="email" placeholder="you@example.com" aria-describedby="cf-email-error" />
+                <p class="field-error" id="cf-email-error" data-error-for="email"></p>
               </div>
             </div>
             <div class="form-row">
               <div>
-                <label for="cf-company">Company / Organization</label>
-                <input id="cf-company" name="company" type="text" placeholder="Optional" />
+                <label for="cf-company">Company / Organization *</label>
+                <input id="cf-company" name="company" type="text" required minlength="2" maxlength="120" autocomplete="organization" placeholder="Your company or organization" aria-describedby="cf-company-error" />
+                <p class="field-error" id="cf-company-error" data-error-for="company"></p>
               </div>
               <div>
-                <label for="cf-role">Role / Title</label>
-                <input id="cf-role" name="role" type="text" placeholder="Optional" />
+                <label for="cf-role">Role / Title *</label>
+                <input id="cf-role" name="role" type="text" required minlength="2" maxlength="80" autocomplete="organization-title" placeholder="Your role or title" aria-describedby="cf-role-error" />
+                <p class="field-error" id="cf-role-error" data-error-for="role"></p>
               </div>
             </div>
             <div>
               <label for="cf-message">Message *</label>
-              <textarea id="cf-message" name="message" required placeholder="Tell us about your interest…"></textarea>
+              <textarea id="cf-message" name="message" required minlength="20" maxlength="2000" placeholder="Tell us your preferred access route, reporting needs, and research questions." aria-describedby="cf-message-error"></textarea>
+              <p class="field-error" id="cf-message-error" data-error-for="message"></p>
             </div>
             <div>
               <button type="submit" class="button primary">Send Message</button>
             </div>
             <div id="form-status" class="form-status" role="alert"></div>
-          </form>
-          <div class="contact-note">
-            <span>BP Partnerships: <a href="mailto:haoran@pgresearch.org">haoran@pgresearch.org</a></span>
-            <span>LP Partnerships: <a href="mailto:chris@pgresearch.org">chris@pgresearch.org</a></span>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-grid">
-      <div>
-        <strong>PureGamma Research</strong>
-        <p>All-Weather Strategy for Digital Assets</p>
-      </div>
-      <div>
-        <p><a href="index.html">Home</a></p>
-        <p><a href="https://puregamma.ai">PureGamma AI</a></p>
-        <p><a href="https://pgresearch.org/">Current website</a></p>
-      </div>
-      <div>
-        <p>© 2026 PG Research. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="pretext-bundle.js?v=202604041901"></script>
-  <script src="main.js?v=202604041901" defer></script>
-</body>
-</html>
+            <p class="form-legal">By sending this form, you acknowledge our <a href="legal.html#privacy">Privacy Notice</a> and <a href="legal.html#terms">Website Terms</a>.</p>
+          </form></details><div class="contact-emails"><span>LP / consultation <a href="mailto:chris@puregamma.ai">chris@puregamma.ai</a></span><span>BP partnerships <a href="mailto:noreply@puregamma.ai">noreply@puregamma.ai</a></span></div>
+   </section></div></div></main><footer class="release-footer"><div class="wrap"><div class="footer-top"><div class="footer-brand">PureGamma Research<p>Independent digital asset research since 2017.<br />Portfolio research, execution, and institutional access.</p><div class="research-support" id="support"><a href="https://buy.stripe.com/4gM6oHdH6anz6NGfj9cbC05" target="_blank" rel="noopener">Support research ↗</a><a href="https://checkout.infini.money/paymentlinks-redirect/pl/meGq2vdX" target="_blank" rel="noopener">Infini ↗</a></div><p style="font-size:9px">Voluntary support does not create an advisory or client relationship.</p></div><div class="footer-links"><strong>Explore</strong><a href="research.html">Research</a><a href="framework.html">Investment framework</a><a href="https://docsend.com/v/94csc/cn" target="_blank" rel="noopener">Institutional materials ↗</a><a href="https://linktr.ee/pgchris" target="_blank" rel="noopener">Network directory ↗</a><a href="https://x.com/PureGammaChris" target="_blank" rel="noopener">@PureGammaChris ↗</a><a href="https://www.rootdata.com/investors/detail/PG%20Trading?k=MTI3NDk%3D" target="_blank" rel="noopener">RootData ↗</a></div><div class="footer-links"><strong>Information</strong><a href="index.html#risk">Performance methodology</a><a href="legal.html#risk">Risk disclosure</a><a href="legal.html#terms">Website terms</a><a href="legal.html#privacy">Privacy notice</a><a href="index.html#contact">Institutional contact</a></div></div><div class="footer-bottom"><p>For information only. This website does not constitute investment advice or an offer. Digital asset trading involves substantial risk. Historical performance is not indicative of future results.</p><span>© 2026 PureGamma Research</span></div></div></footer><script src="pg-release-20261009.js?v=20261009r1" defer></script></body></html>

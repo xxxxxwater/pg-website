@@ -36,3 +36,8 @@ body.legacy-release{--color-verify:#222;--color-risk:#777;--color-data:#777;--co
  .release .article-section{scroll-margin-top:120px}
 }
 @media(max-width:360px){.release .header-links{gap:12px}.release .header-links>a:nth-child(4),.release .header-links>a:nth-child(5){font-size:11px}}
+
+/* Pair product destinations in the research and closing sections. */
+.release .product-link-pair{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.release .research-foot .product-link-pair{justify-content:flex-end}
+@media(max-width:760px){.release .research-foot{flex-direction:column;align-items:flex-start}.release .research-foot .product-link-pair{justify-content:flex-start;gap:12px 20px}}

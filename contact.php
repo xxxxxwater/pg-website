@@ -224,14 +224,14 @@ try {
     $message = nl2br(clean($messageRaw));
     $emailSafe = clean($email);
     $nameHeader = header_text($nameRaw);
-    $subject = "[PGResearch] Contact from {$nameHeader}";
+    $subject = "[PureGamma Research] Contact from {$nameHeader}";
 
     $body = <<<HTML
 <!DOCTYPE html>
 <html>
 <body style="font-family:Georgia,serif;color:#0a0a0a;max-width:600px;margin:0 auto;padding:32px 24px;">
   <div style="border-left:3px solid #0b6f6a;padding-left:16px;margin-bottom:28px;">
-    <h2 style="margin:0 0 4px;font-size:20px;">New Contact — PGResearch.org</h2>
+    <h2 style="margin:0 0 4px;font-size:20px;">New Contact — PureGamma Research</h2>
     <p style="margin:0;color:#666;font-size:13px;">Verified website contact submission</p>
   </div>
   <table style="width:100%;border-collapse:collapse;font-size:15px;">
@@ -241,7 +241,7 @@ try {
     <tr><td style="padding:10px 0;font-weight:600;color:#555;">Role</td><td style="padding:10px 0;">{$role}</td></tr>
   </table>
   <div style="margin-top:24px;"><p style="font-weight:600;color:#555;margin-bottom:8px;">Message</p><div style="background:#f8faf9;padding:16px 20px;border-left:3px solid #0b6f6a;line-height:1.75;">{$message}</div></div>
-  <div style="margin-top:40px;padding-top:16px;border-top:1px solid #eee;font-size:12px;color:#aaa;">Submitted via pgresearch.org contact form</div>
+  <div style="margin-top:40px;padding-top:16px;border-top:1px solid #eee;font-size:12px;color:#aaa;">Submitted via puregamma.ai contact form</div>
 </body>
 </html>
 HTML;
@@ -298,7 +298,7 @@ HTML;
     };
 
     $expect($readResponse(), [220], 'banner');
-    $command('EHLO pgresearch.org', [250], 'EHLO');
+    $command('EHLO puregamma.ai', [250], 'EHLO');
     $command('AUTH LOGIN', [334], 'AUTH');
     $command(base64_encode($cfg['user']), [334], 'username');
     $command(base64_encode($cfg['pass']), [235], 'password');
@@ -306,7 +306,7 @@ HTML;
     $command("RCPT TO:<{$cfg['to']}>", [250, 251], 'RCPT TO');
     $command('DATA', [354], 'DATA');
 
-    $messageId = bin2hex(random_bytes(12)) . '@pgresearch.org';
+    $messageId = bin2hex(random_bytes(12)) . '@puregamma.ai';
     $encodedBody = chunk_split(base64_encode($body));
     $emailPayload = implode("\r\n", [
         'Date: ' . date('r'),

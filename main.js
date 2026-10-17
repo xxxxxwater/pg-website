@@ -549,7 +549,7 @@ function initStreamText() {
 }
 
 // ═══════════════════════════════════════════════════════════════════
-// 11. CONTACT FORM — AJAX submit → contact.php → SMTP → chris@pgresearch.org
+// 11. CONTACT FORM — AJAX submit → contact.php → SMTP → chris@puregamma.ai
 // ═══════════════════════════════════════════════════════════════════
 function initContactForm() {
   const form   = document.getElementById('contact-form');

@@ -1,6 +1,6 @@
 # PureGamma Research website
 
-Static research and composite-strategy website deployed at https://pgresearch.org/.
+Static research and composite-strategy website deployed primarily at https://puregamma.ai/ (also accessible at https://pgresearch.org/ while that domain remains registered).
 
 ## Pages
 

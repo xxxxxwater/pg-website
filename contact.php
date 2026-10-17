@@ -5,7 +5,7 @@ header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store, max-age=0');
 header('X-Content-Type-Options: nosniff');
 
-const ALLOWED_HOSTS = ['pgresearch.org'];
+const ALLOWED_HOSTS = ['pgresearch.org', 'www.pgresearch.org', 'puregamma.ai', 'www.puregamma.ai'];
 const CHALLENGE_DIFFICULTY = 3;
 const CHALLENGE_MIN_AGE = 0;
 const CHALLENGE_MAX_AGE = 7200;

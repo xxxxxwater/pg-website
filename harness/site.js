@@ -49,7 +49,7 @@
         ? 'Verified against the newest GitHub tag'
         : 'The newest tag does not yet include both desktop packages. See release notes.';
     } catch {
-      if (releaseState) releaseState.textContent = 'Showing the verified v0.2.1-rc.2 packages · Check all versions for newer releases';
+      if (releaseState) releaseState.textContent = 'Showing the verified v0.2.1-rc.2-purge.1 packages · Check all versions for newer releases';
     }
   }
   refreshRelease();

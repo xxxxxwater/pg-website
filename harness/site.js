@@ -32,22 +32,24 @@
       const release = await getJson(`${api}/releases/tags/${encodeURIComponent(tag)}`);
       const assets = Array.isArray(release.assets) ? release.assets : [];
       const mac = assets.find(asset => /macos.*x64.*\.zip$/i.test(asset.name));
+      const arm64 = assets.find(asset => /macos.*arm64.*\.zip$/i.test(asset.name));
       const windows = assets.find(asset => /windows.*x64.*\.exe$/i.test(asset.name));
       setText('[data-release-version]', tag.replace(/^puregamma-harness-/, ''));
       setHref('[data-release-page]', release.html_url);
       const sums = assets.find(asset => asset.name === 'SHA256SUMS' || asset.name === 'SHA256SUMS.txt');
       if (sums) setHref('[data-checksums]', sums.browser_download_url);
-      for (const [selector, asset] of [['[data-download-macos]', mac], ['[data-download-windows]', windows]]) {
+      for (const [selector, asset] of [['[data-download-macos]', mac], ['[data-download-arm64]', arm64], ['[data-download-windows]', windows]]) {
         const link = document.querySelector(selector);
         if (!link) continue;
         if (asset) { link.href = asset.browser_download_url; link.removeAttribute('aria-disabled'); }
         else { link.removeAttribute('href'); link.setAttribute('aria-disabled', 'true'); }
       }
       if (mac) setText('[data-file-macos]', `ZIP · ${fileSize(mac.size)} · Intel x64`);
+      if (arm64) setText('[data-file-arm64]', `ZIP · ${fileSize(arm64.size)} · Apple Silicon arm64`);
       if (windows) setText('[data-file-windows]', `EXE · ${fileSize(windows.size)} · Windows x64`);
-      if (releaseState) releaseState.textContent = mac && windows
+      if (releaseState) releaseState.textContent = mac && arm64 && windows
         ? 'Verified against the newest GitHub tag'
-        : 'The newest tag does not yet include both desktop packages. See release notes.';
+        : 'The newest tag does not yet include every desktop package. See release notes.';
     } catch {
       if (releaseState) releaseState.textContent = 'Showing the verified v0.2.1-rc.2-purge.1 packages · Check all versions for newer releases';
     }

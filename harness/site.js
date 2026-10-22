@@ -26,10 +26,9 @@
 
   async function refreshRelease() {
     try {
-      const tags = await getJson(`${api}/tags?per_page=1`);
-      if (!Array.isArray(tags) || !tags[0]?.name) throw new Error('No tags found');
-      const tag = tags[0].name;
+      const tag = 'puregamma-harness-v0.2.1-rc.2-purge.2';
       const release = await getJson(`${api}/releases/tags/${encodeURIComponent(tag)}`);
+      if (release.draft || release.tag_name !== tag) throw new Error('Featured release is unavailable');
       const assets = Array.isArray(release.assets) ? release.assets : [];
       const mac = assets.find(asset => /macos.*x64.*\.zip$/i.test(asset.name));
       const arm64 = assets.find(asset => /macos.*arm64.*\.zip$/i.test(asset.name));
@@ -48,10 +47,10 @@
       if (arm64) setText('[data-file-arm64]', `ZIP · ${fileSize(arm64.size)} · Apple Silicon arm64`);
       if (windows) setText('[data-file-windows]', `EXE · ${fileSize(windows.size)} · Windows x64`);
       if (releaseState) releaseState.textContent = mac && arm64 && windows
-        ? 'Verified against the newest GitHub tag'
-        : 'The newest tag does not yet include every desktop package. See release notes.';
+        ? 'Verified against the published GitHub release'
+        : 'This release does not yet include every desktop package. See release notes.';
     } catch {
-      if (releaseState) releaseState.textContent = 'Showing the verified v0.2.1-rc.2-purge.2 packages · Check all versions for newer releases';
+      if (releaseState) releaseState.textContent = 'Showing direct v0.2.1-rc.2-purge.2 download links · Check release notes if GitHub is unavailable';
     }
   }
   refreshRelease();

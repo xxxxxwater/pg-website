@@ -38,6 +38,10 @@ a,button{outline-offset:4px}
 .button[aria-disabled="true"]{opacity:.45;pointer-events:none}
 .version-line{display:flex;align-items:center;gap:9px;font-size:10px;color:#858585;margin-top:17px;white-space:nowrap}
 .version-line strong{color:#111}
+.win7-line{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:10px;color:#858585;margin-top:10px;line-height:1.6}
+.win7-line a{color:#111;text-decoration:none;border-bottom:1px solid rgba(17,17,17,.22);padding-bottom:1px}
+.win7-line a:hover{border-bottom-color:#111}
+.win7-line span:last-child{color:#a8a8a8}
 .version-dot{width:5px;height:5px;flex-basis:5px}
 .hero-visual{min-width:0;position:relative;padding:9px;background:#171717;border:1px solid #383838;border-radius:11px;box-shadow:0 24px 54px #0000001c}
 .app-shot{display:block;width:100%;height:auto;aspect-ratio:1.72;object-fit:cover;object-position:center top;border-radius:5px}
